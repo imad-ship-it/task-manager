@@ -1,46 +1,52 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
 function AddTask() {
-  const [form, setForm] = useState({ title: '', description: '', due: '' })
-  const [errors, setErrors] = useState({})
-  const [submitted, setSubmitted] = useState(false)
+  const [form, setForm] = useState({ title: '', description: '', due: '' });
+  const [errors, setErrors] = useState({});
+  const [submitted, setSubmitted] = useState(false);
 
   const validate = () => {
-    const newErrors = {}
-    if (!form.title.trim()) newErrors.title = 'Title is required'
-    if (!form.description.trim()) newErrors.description = 'Description is required'
-    if (!form.due) newErrors.due = 'Due date is required'
-    return newErrors
-  }
+    const newErrors = {};
+    if (!form.title.trim()) newErrors.title = 'Title is required';
+    if (!form.description.trim())
+      newErrors.description = 'Description is required';
+    if (!form.due) newErrors.due = 'Due date is required';
+    return newErrors;
+  };
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value })
-    setErrors({ ...errors, [e.target.name]: '' })
-  }
+    setForm({ ...form, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: '' });
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    const newErrors = validate()
+    e.preventDefault();
+    const newErrors = validate();
     if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors)
-      return
+      setErrors(newErrors);
+      return;
     }
-    setSubmitted(true)
-  }
+    setSubmitted(true);
+  };
 
   if (submitted) {
     return (
       <div className="success">
         <h1>Task Added!</h1>
-        <p><strong>{form.title}</strong> has been added successfully.</p>
+        <p>
+          <strong>{form.title}</strong> has been added successfully.
+        </p>
         <button
           className="add-another-btn"
-          onClick={() => { setForm({ title: '', description: '', due: '' }); setSubmitted(false) }}
+          onClick={() => {
+            setForm({ title: '', description: '', due: '' });
+            setSubmitted(false);
+          }}
         >
           Add Another
         </button>
       </div>
-    )
+    );
   }
 
   return (
@@ -66,7 +72,9 @@ function AddTask() {
             onChange={handleChange}
             placeholder="Enter task description"
           />
-          {errors.description && <span className="error">{errors.description}</span>}
+          {errors.description && (
+            <span className="error">{errors.description}</span>
+          )}
         </div>
 
         <div className="field">
@@ -85,7 +93,7 @@ function AddTask() {
         </button>
       </div>
     </div>
-  )
+  );
 }
 
-export default AddTask
+export default AddTask;

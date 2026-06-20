@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
@@ -10,7 +10,7 @@ function Navbar() {
         <Link to="/add">Add Task</Link>
       </div>
     </nav>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

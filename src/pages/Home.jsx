@@ -4,7 +4,7 @@ function Home() {
       <h1>Welcome to TaskManager</h1>
       <p>Stay organized. Add and track your tasks easily.</p>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
