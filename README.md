@@ -1,16 +1,53 @@
-# React + Vite
+# Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Task Manager SPA built with React and Vite as part of the Arbisoft AI-Focused Internship 2026 - Week 1.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 3 routes: Home, Tasks, Add Task
+- Shared Navbar layout
+- Form with client-side validation
+- ESLint + Prettier for code quality
+- Pre-commit hooks with Husky and lint-staged
+- Unit tests with Vitest and React Testing Library
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite
+- React Router v7
+- ESLint + Prettier
+- Husky + lint-staged
+- Vitest + React Testing Library
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+## Available Scripts
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run lint` | Run ESLint |
+| `npm run format` | Run Prettier |
+| `npm run test` | Run unit tests |
+
+## Project Structure
+
+```
+src/
+├── components/
+│   └── Navbar.jsx
+├── pages/
+│   ├── Home.jsx
+│   ├── Tasks.jsx
+│   └── AddTask.jsx
+├── App.jsx
+├── main.jsx
+└── index.css
+```
