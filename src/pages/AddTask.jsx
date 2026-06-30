@@ -1,3 +1,4 @@
+// TODO (Week 3): This component currently uses local-only validation and has no API calls to the backend yet.
 import { useState } from 'react';
 
 function AddTask() {

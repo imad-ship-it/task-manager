@@ -1,3 +1,4 @@
+// TODO (Week 3): This component currently uses static data and has no API calls to the backend yet.
 function Tasks() {
   const tasks = [
     { id: 1, title: 'Complete Week 1 deliverables', due: '2026-06-25' },
